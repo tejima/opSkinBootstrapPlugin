@@ -24,9 +24,9 @@
       <div class="push_content">
       {{if category=="link"}}
         {{if unread==false}}
-        <?php echo __('Friend request') ?>
+        <?php echo __('%Friend% link request') ?>
         {{else}}
-        <?php echo __('Do you accept friend request?') ?>
+        <?php echo __('Do you accept %friend% link request?') ?>
         <div class="push_yesno">
           <button class="friend-accept">YES</button>
           <button class="friend-reject">NO</button>
@@ -54,6 +54,17 @@
 </script>
 
 <?php endif ?>
+
+<div id="globalNav">
+<?php
+$globalNavOptions = array(
+  'type'      => opToolkit::isSecurePage() ? 'secure_global' : 'insecure_global',
+  'culture'   => sfContext::getInstance()->getUser()->getCulture(),
+  'memberName' => sfContext::getInstance()->getUser()->getMember()->getName(), 
+);
+include_component('default', 'globalNav', $globalNavOptions);
+?>
+</div><!-- globalNav --> 
 
 <ul class="nav">
 <?php

@@ -4,11 +4,12 @@
 <?php include_http_metas() ?>
 <?php include_metas() ?>
 <?php include_title() ?>
+<?php use_stylesheet('/cache/css/customizing.css') ?>
 <?php include_stylesheets() ?>
 <?php if (Doctrine::getTable('SnsConfig')->get('customizing_css')): ?>
 <link rel="stylesheet" type="text/css" href="<?php echo url_for('@customizing_css') ?>" />
 <?php endif; ?>
-<?php if (Doctrine::getTable('SnsConfig')->get('enable_jsonapi')): ?>
+<?php if (opConfig::get('enable_jsonapi') && opToolkit::isSecurePage()): ?>
 <?php
 use_helper('Javascript');
 
@@ -16,13 +17,13 @@ use_javascript('jquery.min.js');
 use_javascript('jquery.tmpl.min.js');
 use_javascript('jquery.notify.js');
 use_javascript('op_notify.js');
-$json = array(
+$jsonData = array(
   'apiKey' => $sf_user->getMemberApiKey(),
   'apiBase' => app_url_for('api', 'homepage'),
 );
 
 echo javascript_tag('
-var openpne = '.json_encode($json, defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PRINT : 0).';
+var openpne = '.json_encode($jsonData).';
 ');
 ?>
 <?php endif ?>
@@ -35,13 +36,13 @@ var openpne = '.json_encode($json, defined('JSON_PRETTY_PRINT') ? JSON_PRETTY_PR
 <?php echo $op_config->get('pc_html_top') ?>
 <div id="Container">
 
-<div class="navbar">
-<div class="navbar-inner">
+<div id="Header" class="navbar">
+<div id="HeaderContainer" class="navbar-inner">
 <div class="container">
 <?php include_partial('global/header') ?>
 </div>
-</div>
-</div>
+</div><!-- HeaderContainer --> 
+</div><!-- Header --> 
 
 <div id="Contents">
 <div id="ContentsContainer">
