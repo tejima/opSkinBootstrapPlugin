@@ -5,6 +5,8 @@
 <?php include_metas() ?>
 <?php include_title() ?>
 <?php use_stylesheet('/cache/css/customizing.css') ?>
+<link rel="stylesheet/less" href="/opSkinUnitedPlugin/css/bootstrap.less">
+<script src="/opSkinUnitedPlugin/js/less-1.3.0.min.js"></script>
 <?php include_stylesheets() ?>
 <?php if (Doctrine::getTable('SnsConfig')->get('customizing_css')): ?>
 <link rel="stylesheet" type="text/css" href="<?php echo url_for('@customizing_css') ?>" />
