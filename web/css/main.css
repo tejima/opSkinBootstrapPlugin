@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 
+#profile_op_preset_birthday_value_year {width: 80px;}
+#profile_op_preset_birthday_value_month {width: 80px;}
+#profile_op_preset_birthday_value_day {width: 80px;}
 
 div#globalNav {
   display: none;  
@@ -27,7 +30,7 @@ iframe, object, embed {
   border: none;
   text-align: left;
 }
-
+/*
 ul, ol {
   list-style-position: outside;
   list-style-type: none;
@@ -110,7 +113,7 @@ form p {
   margin: 0;
   padding: 0;
 }
-
+*/
 /*==============================================================================
  * OpenPNE Common Style
  *----------------------------------------------------------------------------*/
@@ -128,10 +131,10 @@ select {
   font-size: inherit;
 }
 
+/*
 a:link {
   color: #33B5E5;
 }
-
 a:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
@@ -141,6 +144,7 @@ a:focus {
 a:hover, a:active {
   color: #005580;
 }
+*/
 
 input[type='text'], input[type='password'], .input_text {
   display: inline-block;
@@ -780,15 +784,9 @@ background: #FFFFFF;
 }
 
 /*----------------------------------------------
- * Contents
- *--------------------------------------------*/
-#Contents {
-  background: #FFFFFF;
-}
-
-/*----------------------------------------------
  * Footer
  *--------------------------------------------*/
+
 #Footer {
   height: 50px;
   padding: 5px;
@@ -798,10 +796,11 @@ background: #FFFFFF;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   color: #FFFFFF;
 }
-
+/*
 #Footer a {
   color: #0088cc;
 }
+*/
 
 #Footer p {
   padding: 0 10px;
@@ -830,12 +829,12 @@ div.ditem {
  *--------------------------------------------*/
 div.partsHeading {
   margin-bottom: 10px;
-  padding: 7px 14px;
+  padding: 7px 7px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background-color: #dd4814;
-  border: 1px solid #dd4814;
+  background-color: #fda130;
+  border: 1px solid #fda130;
   -webkit-border-radius: 3px; 
   -moz-border-radius: 3px; 
   border-radius: 3px; 
@@ -865,6 +864,8 @@ div.partsHeading a {
 div.partsHeading h3 {
   display: inline;
   font-weight: bold;
+  font-size: 14px;
+  line-height: 10px;
 }
 
 div.partsHeading p {
@@ -1024,7 +1025,7 @@ div.operation ul.moreInfo li {
   color: #ffffff;
   list-style: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0088cc;
+  background-color: #fda130;
 }
 
 
