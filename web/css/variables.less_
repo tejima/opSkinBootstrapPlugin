@@ -1,8 +1,8 @@
 // Variables.less
 // Variables to customize the look and feel of Bootstrap
-// Swatch: United
-// Version: 2.0.3
 // -----------------------------------------------------
+
+
 
 // GLOBAL VALUES
 // --------------------------------------------------
@@ -15,20 +15,20 @@
 @grayDark:              #333;
 @gray:                  #555;
 @grayLight:             #999;
-@grayLighter:           #F5F5F5;
+@grayLighter:           #eee;
 @white:                 #fff;
 
 
 // Accent colors
 // -------------------------
-@blue:                  #19B6EE;
+@blue:                  #049cdb;
 @blueDark:              #0064cd;
-@green:                 #38B44A;
-@red:                   #DF382C;
-@yellow:                #EFB73E;
-@orange:                #DD4814;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
 @pink:                  #c3325f;
-@purple:                #772953;
+@purple:                #7a43b6;
 
 
 // Scaffolding
@@ -39,13 +39,13 @@
 
 // Links
 // -------------------------
-@linkColor:             @orange;
+@linkColor:             #08c;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        'Ubuntu', Tahoma, sans-serif;
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
@@ -71,13 +71,13 @@
 // -------------------------
 @btnBackground:                     @white;
 @btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         darken(@white, 20%);
+@btnBorder:                         #ccc;
 
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
 
-@btnInfoBackground:                 lighten(@purple, 15%);
-@btnInfoBackgroundHighlight:        @purple;
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
 
 @btnSuccessBackground:              #62c462;
 @btnSuccessBackgroundHighlight:     #51a351;
@@ -98,13 +98,13 @@
 @inputBorder:                   #ccc;
 @inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;
-@formActionsBackground:         transparent;
+@formActionsBackground:         #f5f5f5;
 
 // Dropdowns
 // -------------------------
 @dropdownBackground:            @white;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @linkColor;
+@dropdownLinkColor:             @grayDark;
 @dropdownLinkColorHover:        @white;
 @dropdownLinkBackgroundHover:   @linkColor;
 
@@ -144,12 +144,12 @@
 
 // Navbar
 // -------------------------
-@navbarHeight:                    240px;
+@navbarHeight:                    100px;
 @navbarBackground:                @yellow;
-@navbarBackgroundHighlight:       #CE4213;
+@navbarBackgroundHighlight:       @orange;
 
-@navbarText:                      @white;
-@navbarLinkColor:                 @white;
+@navbarText:                      @yellow;
+@navbarLinkColor:                 @yellow;
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
@@ -171,20 +171,20 @@
 
 // Form states and alerts
 // -------------------------
-@warningText:             #ECA918;
-@warningBackground:       lighten(@warningText, 40%);
+@warningText:             #c09853;
+@warningBackground:       #fcf8e3;
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
-@errorText:               #DF382C;
-@errorBackground:         lighten(@errorText, 40%);
+@errorText:               #b94a48;
+@errorBackground:         #f2dede;
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             #38B44A;
-@successBackground:       lighten(@successText, 40%);
+@successText:             #468847;
+@successBackground:       #dff0d8;
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                @purple;
-@infoBackground:          lighten(@purple, 50%);
+@infoText:                #3a87ad;
+@infoBackground:          #d9edf7;
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 
@@ -195,8 +195,8 @@
 // Default 940px grid
 // -------------------------
 @gridColumns:             12;
-@gridColumnWidth:         23px;
-@gridGutterWidth:         4px;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // Fluid grid

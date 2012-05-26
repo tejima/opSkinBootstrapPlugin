@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
 
+#profile_op_preset_birthday_value_year {width: 80px;}
+#profile_op_preset_birthday_value_month {width: 80px;}
+#profile_op_preset_birthday_value_day {width: 80px;}
 
 div#globalNav {
-  display: none;  
+  display: none;
 }
 
 .navbar .container{
@@ -28,88 +31,6 @@ iframe, object, embed {
   text-align: left;
 }
 
-ul, ol {
-  list-style-position: outside;
-  list-style-type: none;
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  empty-cells: show;
-  margin: 0;
-  font-size: 1em;
-}
-
-* {
-  word-break: break-all;
-}
-
-*:first-child+html table {
-  border-collapse: collapse;
-}
-
-* html table {
-  border-collapse: collapse;
-}
-
-th, td {
-  vertical-align: middle;
-}
-
-address, cite, caption, th, del, ins,
-abbr, acronym, dfn, em, strong,
-code, kbd, samp, var {
-  border: none;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  text-align: left;
-  text-decoration: none;
-}
-
-img {
-  border: none;
-  vertical-align: baseline;
-}
-
-a img {
-  vertical-align: text-bottom;
-}
-
-* html a img {
-  vertical-align: baseline;
-}
-
-br {
-  letter-spacing: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-q:before, q:after {
-  content: "";
-}
-
-form, fieldset, input, textarea {
-  margin: 0;
-}
-
-form, fieldset {
-  padding: 0;
-}
-
-fieldset {
-  border: none;
-}
-
-form p {
-  margin: 0;
-  padding: 0;
-}
 
 /*==============================================================================
  * OpenPNE Common Style
@@ -128,19 +49,6 @@ select {
   font-size: inherit;
 }
 
-a:link {
-  color: #33B5E5;
-}
-
-a:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-a:hover, a:active {
-  color: #005580;
-}
 
 input[type='text'], input[type='password'], .input_text {
   display: inline-block;
@@ -215,17 +123,17 @@ div.parts .form table {
   margin-bottom: 18px;
 }
 
-.form table th, .form table td { 
-  padding: 8px; 
+.form table th, .form table td {
+  padding: 8px;
   line-height: 18px;
   text-align: left;
-  vertical-align: top; 
+  vertical-align: top;
   border-top: 1px solid #ddd;
 }
-.form table th { 
+.form table th {
   font-weight: bold;
 }
-.form table thead th { 
+.form table thead th {
   vertical-align: bottom;
 }
 .form table thead:first-child tr th, .form table thead:first-child tr td {
@@ -448,7 +356,8 @@ background: #FFFFFF;
 #notificationCenterDetailHeader {
   width: 306px;
   padding: 7px;
-  background: #97310E;
+  /*background: #97310E;*/
+  background: @navbarBackground;
   border-bottom: 1px solid #E6E6E6;
   text-align: left;
   display: inline-block;
@@ -639,6 +548,7 @@ background: #FFFFFF;
   border-radius: 3px; 
 }
 
+
 /*----------------------------------------------
  * Navigation
  *--------------------------------------------*/
@@ -780,15 +690,9 @@ background: #FFFFFF;
 }
 
 /*----------------------------------------------
- * Contents
- *--------------------------------------------*/
-#Contents {
-  background: #FFFFFF;
-}
-
-/*----------------------------------------------
  * Footer
  *--------------------------------------------*/
+
 #Footer {
   height: 50px;
   padding: 5px;
@@ -798,10 +702,11 @@ background: #FFFFFF;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   color: #FFFFFF;
 }
-
+/*
 #Footer a {
   color: #0088cc;
 }
+*/
 
 #Footer p {
   padding: 0 10px;
@@ -825,17 +730,18 @@ div.ditem {
   padding: 5px 6px;
 }
 
+
 /*----------------------------------------------
  * Parts Heading
  *--------------------------------------------*/
 div.partsHeading {
   margin-bottom: 10px;
-  padding: 7px 14px;
+  padding: 7px 7px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background-color: #dd4814;
-  border: 1px solid #dd4814;
+  background-color: @navbarBackground;
+  border: 1px solid @navbarBackground;
   -webkit-border-radius: 3px; 
   -moz-border-radius: 3px; 
   border-radius: 3px; 
@@ -865,6 +771,8 @@ div.partsHeading a {
 div.partsHeading h3 {
   display: inline;
   font-weight: bold;
+  font-size: 14px;
+  line-height: 10px;
 }
 
 div.partsHeading p {
@@ -1024,7 +932,7 @@ div.operation ul.moreInfo li {
   color: #ffffff;
   list-style: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0088cc;
+  background-color: @navbarBackground;
 }
 
 
@@ -1484,6 +1392,8 @@ div.operation ul.moreInfo li {
   width: 76px;
 }
 
+
+
 /*==============================================================================
  * homeRecentList
  *----------------------------------------------------------------------------*/
@@ -1530,6 +1440,7 @@ div.operation ul.moreInfo li {
   text-align: center;
 }
 
+
 /*==============================================================================
  * recentList
  *----------------------------------------------------------------------------*/
@@ -1538,7 +1449,7 @@ div.operation ul.moreInfo li {
   clear: both;
   border: 1px solid #CCCCCC;
   margin-bottom: 5px;
-  /zoom: 1;
+  /*/zoom: 1;*/
 }
 
 .recentList dt {
@@ -1567,7 +1478,7 @@ div.operation ul.moreInfo li {
   clear: both;
   border: 1px solid #CCCCCC;
   margin-bottom: 10px;
-  /zoom: 1;
+  /*/zoom: 1;*/
 }
 
 .commentList dt {
@@ -1633,6 +1544,10 @@ div.operation ul.moreInfo li {
   padding: 16px 5px;
 }
 
+
+
+
+
 /*==============================================================================
  * line
  *----------------------------------------------------------------------------*/
@@ -1670,6 +1585,8 @@ div.activityBox {
   zoom: 1;
   word-wrap: break-word;
 }
+
+
 
 /*======================================
  * box_form
@@ -1904,3 +1821,5 @@ span.op_color {
         color: inherit;
         font-size: inherit;
 }
+
+
